@@ -12,7 +12,7 @@
 Run `yarn server`
 Server will be run on `http://localhost:3000/`
 
-##Run Application
+## Run Application
 ### Development server
 Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 

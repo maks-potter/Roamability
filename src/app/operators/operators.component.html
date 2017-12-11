@@ -1,0 +1,38 @@
+<div class='operators'>
+
+  <div class='header'>
+    Operators Prices
+  </div>
+
+  <div class='content'>
+    <div class='table-header inline middle space-between'>
+      <div class='table-header-item expander padding inline middle center'></div>
+      <div class='table-header-item item-width-3 padding inline middle center'>Name</div>
+      <div class='table-header-item item-width-3 padding inline middle end'>Price</div>
+      <div class='table-header-item item-width-3 padding inline middle end'>Time</div>
+    </div>
+
+    <div class='table-content'>
+      <div class='table-content-wrapper inline space-between' *ngFor='let operator of operators'
+           [ngClass]='{"expanded": operator.isExpand}' (click)='operatorDetail(operator)'>
+        <div class='table-content-item padding expander' (click)='expandOperator($event, operator)'>
+          <span *ngIf='operator.isExpand'>▼</span>
+          <span *ngIf='!operator.isExpand'>►</span>
+        </div>
+
+        <div class='table-content-item name padding item-width-3 inline space-between'>
+          <div>{{operator.operatorName}}</div>
+          <div *ngIf='operator.prices.length > 1'>({{operator.prices.length}})</div>
+        </div>
+
+        <div class='prices-wrapper item-width-2'>
+          <div class='price-item inline' *ngFor='let priceItem of operator.prices'>
+            <div class='table-content-item price inline end padding'>{{priceItem.price}}</div>
+            <div class='table-content-item inline end padding'>{{priceItem.timestamp | date:'HH:mm:ss'}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

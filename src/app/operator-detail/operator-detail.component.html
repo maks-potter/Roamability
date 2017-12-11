@@ -1,0 +1,13 @@
+<div class='operator-detail'>
+
+  <div class='inline middle'>
+    <button class='btn-back' (click)='backToOperators()'>Back</button>
+    <div class='header'>{{selectedOperator?.operatorName}}</div>
+  </div>
+
+  <div class='content'>
+    <div class='price inline middle center {{checkCurrentPrice()}}'>{{selectedOperator?.prices[0]?.price}}</div>
+    <div class='date inline middle center'>{{selectedOperator?.prices[0]?.timestamp | date:'HH:mm:ss'}}</div>
+  </div>
+
+</div>

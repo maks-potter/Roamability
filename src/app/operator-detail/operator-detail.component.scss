@@ -1,0 +1,31 @@
+.operator-detail {
+  width: 100%;
+  height: 100%;
+
+  .header {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 50px;
+  }
+
+  .content {
+    .price {
+      margin-top: 25px;
+      font-size: 4rem;
+
+      &.red {
+        color: #ff0000;
+      }
+
+      &.green {
+        color: #00ff00;
+      }
+    }
+
+    .date {
+      margin-top: 15px;
+    }
+  }
+}
